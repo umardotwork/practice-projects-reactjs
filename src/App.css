@@ -1,0 +1,205 @@
+* {
+  background-color: rgb(220, 246, 246);
+}
+.App {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.header {
+  background-color: #9fd2e0;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  text-decoration: none !important;
+  margin-bottom: 3rem;
+}
+
+.ul-head {
+  background-color: #9fd2e0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  text-decoration: none !important;
+}
+
+li {
+  background-color: #9fd2e0;
+  padding-right: 3rem;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+button {
+  font-size: 1rem;
+  background: #61dafb;
+  outline: 1px solid #61dafb;
+  border-radius: 5px;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #beeffd;
+}
+
+.navigator-btn {
+  margin-top: 3rem;
+}
+
+p {
+  font-weight: 600;
+}
+
+input {
+  font-size: 1rem;
+  border: 2px solid #61dafb;
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
+}
+.temp {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-decoration: underline;
+  color: rgb(110, 98, 78);
+}
+.bottom {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+
+.humidity {
+  padding-left: 2.2rem;
+  padding-right: 2.2rem;
+}
+.wind {
+  color: #40a2bd;
+}
+.feels {
+  color: #9b9b9b;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.page404 {
+  text-align: center;
+  padding: 50px 0;
+  background-color: rgb(220, 246, 246);
+  font-family: "Arvo", serif;
+}
+
+.page404_bg {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page404_bg h1 {
+  font-size: 60px;
+}
+
+.page404_bg h3 {
+  font-size: 80px;
+}
+
+.link404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #637162;
+  margin: 20px 0;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 7px;
+}
+.link404:hover {
+  background-color: #404640;
+}
+
+.contantbox_404 {
+  margin-top: -50px;
+  padding-top: 2rem;
+}
+
+.api-main {
+  margin-left: 21%;
+  margin-right: 22%;
+  font-family: monospace;
+  font-size: large;
+  text-align: left;
+}
+
+.api-title1 {
+  color: #637162;
+  text-decoration: underline;
+  padding: 2rem;
+  margin-left: -2rem;
+}
+
+.api-title {
+  color: rgb(57, 45, 96);
+  text-decoration: underline;
+  margin: 2rem 0;
+}
+
+.welcome {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 1rem;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
