@@ -9,6 +9,8 @@ const Apidata = () => {
   const { data } = useExternalHook(
     "https://jsonplaceholder.typicode.com/posts"
   );
+  // const location = useLocation();
+  // console.log(location);
 
   //   const fetchdata = () => {
   //     axios
@@ -29,12 +31,12 @@ const Apidata = () => {
   return (
     <>
       <div className="api-main">
-        <h1 className="api-title1">JSONplaceholder Api Comments Data</h1>
+        <h1 className="api-title1">JSONplaceholder Api Posts Data</h1>
         {data &&
-          data?.slice(0, 8).map((item) => {
+          data?.slice(0, 10).map((item) => {
             return (
               <div key={item.id}>
-                <Link to={"/jsoncomments/article/" + item.id}>
+                <Link to={"/jsonposts/post/" + item.id}>
                   <h2 className="api-title">
                     {item.id}: {item.title}
                   </h2>

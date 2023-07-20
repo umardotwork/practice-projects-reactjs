@@ -6,6 +6,8 @@ const useGeoLocation = () => {
   const [accessDenied, setAccessDenied] = useState(false);
 
   const requestLocationAccess = () => {
+    //setIsLoading(true);
+    //setAccessDenied(false);
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -19,14 +21,18 @@ const useGeoLocation = () => {
             latitude: latitude,
             longitude: longitude,
           });
+          //setIsLoading(false);
         },
         (error) => {
           console.error("Error getting location:", error);
+          //setIsLoading(false);
+          //setAccessDenied(true);
           alert("Error getting Location");
         }
       );
     } else {
       console.error("Geolocation is not supported by this browser.");
+      //setIsLoading(false);
     }
   };
 
@@ -35,13 +41,13 @@ const useGeoLocation = () => {
       setIsLoading(true);
       setAccessDenied(false);
 
-      const latitudeFromLocalStorage = localStorage.getItem("latitude");
-      const longitudeFromLocalStorage = localStorage.getItem("longitude");
+      const LocalStoragelatitude = localStorage.getItem("latitude");
+      const LocalStoragelongitude = localStorage.getItem("longitude");
 
-      if (latitudeFromLocalStorage && longitudeFromLocalStorage) {
+      if (LocalStoragelatitude && LocalStoragelongitude) {
         setLocation({
-          latitude: latitudeFromLocalStorage,
-          longitude: longitudeFromLocalStorage,
+          latitude: LocalStoragelatitude,
+          longitude: LocalStoragelongitude,
         });
       } else if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(

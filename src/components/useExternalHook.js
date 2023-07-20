@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-// Custom React Hook
+//  Custom React Hook
 
 const useExternalHook = (url) => {
   const [data, setData] = useState();

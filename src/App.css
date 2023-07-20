@@ -182,16 +182,34 @@ input {
 }
 
 .api-title1 {
+  text-align: center;
   color: #637162;
   text-decoration: underline;
   padding: 2rem;
-  margin-left: -2rem;
 }
 
 .api-title {
   color: rgb(57, 45, 96);
-  text-decoration: underline;
+
   margin: 2rem 0;
+  text-decoration: none !important;
+  text-transform: capitalize;
+}
+
+.api-title2 {
+  text-align: center;
+  justify-content: center;
+  color: rgb(57, 45, 96);
+
+  margin: 2rem 0;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.api-body {
+  text-align: center;
+  justify-content: left !important;
+  font-weight: 400;
 }
 
 .welcome {

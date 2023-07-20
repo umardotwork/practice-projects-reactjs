@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import Welcome from "./components/Welcome";
 import Navigator from "./components/Navigator";
 import ApiDataC from "./components/ApiDataC";
+import Products from "./components/Products";
 
 function App() {
   const [heading, setHeading] = useState("Hello World");
@@ -26,9 +27,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Hello heading={heading} />} />
           <Route path="/weather" element={<Weather />} />
-          <Route path="/jsoncomments" element={<Apidata />} />
-          <Route path="/jsoncomments/article/:id" element={<ApiDataC />} />
+          <Route path="/jsonposts" element={<Apidata />} />
+          <Route path="/jsonposts/post/:id" element={<ApiDataC />} />
           <Route path="/navigator" element={<Navigator />} />
+          <Route path="/products" element={<Products />} />
           <Route path="/hello" element={<Welcome />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
