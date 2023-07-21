@@ -48,7 +48,7 @@ const Apidata = () => {
           data?.slice(0, 15).map((item) => {
             return (
               <div key={item.id}>
-                <Link to={"/jsonposts/post/" + item.id}>
+                <Link to={"/jsonposts/posts/" + item.id}>
                   <h2 className="api-title">
                     {item.id}: {item.title}
                   </h2>

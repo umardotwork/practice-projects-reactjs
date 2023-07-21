@@ -57,29 +57,29 @@ const Products = ({ item }) => {
               <p className="description">{item.description}</p>
               <span className="price">Price: ${item.price}</span>
             </div>
-            <Link to="/launchingsoon">
+            <Link to="/products/launchingsoon">
               <button className="product-btn">Learn More</button>
             </Link>
           </div>
           <div className="card">
-            <img src={item.image} alt={item.name} className="image" />
+            <img src={item.image1} alt={item.name} className="image" />
             <div className="content">
               <h2 className="title">{item.name}</h2>
               <p className="description">{item.description}</p>
               <span className="price">Price: ${item.price}</span>
             </div>
-            <Link to="/launchingsoon">
+            <Link to="/products/launchingsoon">
               <button className="product-btn">Learn More</button>
             </Link>
           </div>
           <div className="card">
-            <img src={item.image} alt={item.name} className="image" />
+            <img src={item.image2} alt={item.name} className="image" />
             <div className="content">
               <h2 className="title">{item.name}</h2>
               <p className="description">{item.description}</p>
               <span className="price">Price: ${item.price}</span>
             </div>
-            <Link to="/launchingsoon">
+            <Link to="/products/launchingsoon">
               <button className="product-btn">Learn More</button>
             </Link>
           </div>

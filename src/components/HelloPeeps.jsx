@@ -12,7 +12,12 @@ const Hello = (props) => {
 
   const StatusBar = () => {
     const isOnline = useOnlineStatus();
-    return <h1>{isOnline ? "✅ Online" : "❌ Disconnected"}</h1>;
+    return (
+      <>
+        <h3>Your browser connection status ↴</h3>
+        <h1>{isOnline ? "✅ Online" : "❌ Disconnected"}</h1>
+      </>
+    );
   };
 
   return (
