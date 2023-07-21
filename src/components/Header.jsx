@@ -5,8 +5,8 @@ const Header = () => {
   return (
     <div className="header">
       <ul className="ul-head">
-        <Link to="/hello">
-          <li>Hello</li>
+        <Link to="/urlshortner">
+          <li>UrlShortner</li>
         </Link>
         <Link to="/weather">
           <li>WeatherAPI</li>

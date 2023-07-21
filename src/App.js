@@ -11,6 +11,7 @@ import Navigator from "./components/Navigator";
 import ApiDataC from "./components/ApiDataC";
 import Products from "./components/Products";
 import LaunchingSoon from "./components/LaunchingSoon";
+import UrlShortner from "./components/UrlShortner";
 
 function App() {
   const [heading, setHeading] = useState("Hello World");
@@ -48,7 +49,7 @@ function App() {
           <Route path="/jsonposts/posts/:id" element={<ApiDataC />} />
           <Route path="/navigator" element={<Navigator />} />
           <Route path="/products" element={<Products item={exampleItem} />} />
-          <Route path="/hello" element={<Welcome />} />
+          <Route path="/urlshortner" element={<UrlShortner />} />
           <Route path="/products/launchingsoon" element={<LaunchingSoon />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
