@@ -11,8 +11,9 @@ const UrlShortner = () => {
     axios
       .get(`https://api.shrtco.de/v2/shorten?url=${userurl}`)
       .then((Response) => {
-        console.log(Response.data.result.full_short_link3);
-        setSurl(Response.data.result.full_short_link3);
+        console.log(Response);
+        console.log(Response.data.result.full_short_link);
+        setSurl(Response.data.result.full_short_link);
         setCopytxt("Copy");
       })
       .catch((Error) => {

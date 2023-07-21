@@ -1,4 +1,4 @@
-import React, { useDebugValue, useSyncExternalStore } from "react";
+import { useDebugValue, useSyncExternalStore } from "react";
 
 const useOnlineStatus = () => {
   const subscribe = (callback) => {

@@ -121,38 +121,4 @@ const Products = ({ item }) => {
   );
 };
 
-const styles = {
-  card: {
-    width: "300px",
-    border: "1px solid #ccc",
-    borderRadius: "8px",
-    padding: "16px",
-    margin: "16px",
-    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-    boxSizing: "border-box",
-  },
-  image: {
-    width: "100%",
-    borderRadius: "4px",
-    marginBottom: "8px",
-  },
-  content: {
-    textAlign: "left",
-  },
-  title: {
-    fontSize: "20px",
-    fontWeight: "bold",
-    marginBottom: "8px",
-  },
-  description: {
-    fontSize: "16px",
-    marginBottom: "8px",
-  },
-  price: {
-    fontSize: "18px",
-    color: "#007bff",
-    fontWeight: "bold",
-  },
-};
-
 export default Products;
