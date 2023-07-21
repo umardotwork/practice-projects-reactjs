@@ -6,19 +6,19 @@ const Header = () => {
     <div className="header">
       <ul className="ul-head">
         <Link to="/hello">
-          <li>HELLO</li>
+          <li>Hello</li>
         </Link>
         <Link to="/weather">
-          <li>WEATHER API</li>
+          <li>WeatherAPI</li>
         </Link>
         <Link to="/jsonposts">
-          <li>JSONph API</li>
+          <li>JSONphAPI</li>
         </Link>
         <Link to="/navigator">
-          <li>GEO NAVIGATOR</li>
+          <li>GeoNavigator</li>
         </Link>
         <Link to="/products">
-          <li>PRODUCTS</li>
+          <li>Products</li>
         </Link>
       </ul>
     </div>

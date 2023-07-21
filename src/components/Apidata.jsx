@@ -6,9 +6,21 @@ import { Link } from "react-router-dom";
 const Apidata = () => {
   //const [data, setData] = useState([]);
 
-  const { data } = useExternalHook(
-    "https://jsonplaceholder.typicode.com/posts"
-  );
+  const apiUrl = "https://jsonplaceholder.typicode.com/posts";
+  const { data, loading } = useExternalHook(apiUrl);
+
+  if (loading) {
+    return (
+      <div>
+        <h2>Loading data...</h2>
+      </div>
+    );
+  }
+
+  const handleScrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   // const location = useLocation();
   // console.log(location);
 
@@ -33,7 +45,7 @@ const Apidata = () => {
       <div className="api-main">
         <h1 className="api-title1">JSONplaceholder Api Posts Data</h1>
         {data &&
-          data?.slice(0, 10).map((item) => {
+          data?.slice(0, 15).map((item) => {
             return (
               <div key={item.id}>
                 <Link to={"/jsonposts/post/" + item.id}>
@@ -46,6 +58,11 @@ const Apidata = () => {
               </div>
             );
           })}
+      </div>
+      <div className="apidata-btn">
+        <button onClick={handleScrollTop} className="link404">
+          Go to Top
+        </button>
       </div>
     </>
   );

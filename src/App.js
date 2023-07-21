@@ -10,6 +10,7 @@ import Welcome from "./components/Welcome";
 import Navigator from "./components/Navigator";
 import ApiDataC from "./components/ApiDataC";
 import Products from "./components/Products";
+import LaunchingSoon from "./components/LaunchingSoon";
 
 function App() {
   const [heading, setHeading] = useState("Hello World");
@@ -19,6 +20,14 @@ function App() {
       setHeading("Hello World, This is updated Text");
     }, 2000);
   }, []);
+
+  const exampleItem = {
+    name: "Product",
+    description: "This is an example item description.",
+    price: 999.99,
+    image:
+      "https://colors.dopely.top/inside-colors/wp-content/uploads/2021/08/black-diamond.jpg",
+  };
 
   return (
     <>
@@ -30,8 +39,9 @@ function App() {
           <Route path="/jsonposts" element={<Apidata />} />
           <Route path="/jsonposts/post/:id" element={<ApiDataC />} />
           <Route path="/navigator" element={<Navigator />} />
-          <Route path="/products" element={<Products />} />
+          <Route path="/products" element={<Products item={exampleItem} />} />
           <Route path="/hello" element={<Welcome />} />
+          <Route path="/launchingsoon" element={<LaunchingSoon />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </div>

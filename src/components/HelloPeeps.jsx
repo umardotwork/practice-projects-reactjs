@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Welcome from "./Welcome";
+import useOnlineStatus from "./useOnlineStatus";
 
 const Hello = (props) => {
   const [newHeading, setNewHeading] = useState("");
@@ -9,17 +10,25 @@ const Hello = (props) => {
     setNewHeading(props.heading);
   }, [props.heading]);
 
+  const StatusBar = () => {
+    const isOnline = useOnlineStatus();
+    return <h1>{isOnline ? "✅ Online" : "❌ Disconnected"}</h1>;
+  };
+
   return (
-    <div>
-      <Welcome />
-      <h2>{newHeading}</h2>
+    <>
+      <div>
+        <Welcome />
+        <h2>{newHeading}</h2>
 
-      <button onClick={() => setFontSize((size) => size + 1)}>
-        Click to increase fontSize
-      </button>
+        <button onClick={() => setFontSize((size) => size + 1)}>
+          Click to increase fontSize
+        </button>
 
-      <p style={{ fontSize }}>I'm Umar Ashraf</p>
-    </div>
+        <p style={{ fontSize }}>I'm Umar Ashraf</p>
+      </div>
+      <StatusBar />
+    </>
   );
 };
 

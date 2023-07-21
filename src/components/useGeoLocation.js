@@ -6,8 +6,6 @@ const useGeoLocation = () => {
   const [accessDenied, setAccessDenied] = useState(false);
 
   const requestLocationAccess = () => {
-    //setIsLoading(true);
-    //setAccessDenied(false);
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -21,18 +19,14 @@ const useGeoLocation = () => {
             latitude: latitude,
             longitude: longitude,
           });
-          //setIsLoading(false);
         },
         (error) => {
           console.error("Error getting location:", error);
-          //setIsLoading(false);
-          //setAccessDenied(true);
           alert("Error getting Location");
         }
       );
     } else {
-      console.error("Geolocation is not supported by this browser.");
-      //setIsLoading(false);
+      console.error("Geolocation is not supported by this browser");
     }
   };
 
