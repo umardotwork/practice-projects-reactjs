@@ -1,12 +1,12 @@
 import { useDebugValue, useSyncExternalStore } from "react";
 
 const useOnlineStatus = () => {
-  const subscribe = (callback) => {
-    window.addEventListener("online", callback);
-    window.addEventListener("offline", callback);
+  const subscribe = (status) => {
+    window.addEventListener("online", status);
+    window.addEventListener("offline", status);
     return () => {
-      window.removeEventListener("online", callback);
-      window.removeEventListener("offline", callback);
+      window.removeEventListener("online", status);
+      window.removeEventListener("offline", status);
     };
   };
 

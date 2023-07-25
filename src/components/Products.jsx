@@ -1,6 +1,6 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 //import Welcome from "./Welcome";
 import Logo from "../logo.svg";
 

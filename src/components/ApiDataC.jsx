@@ -3,8 +3,8 @@ import useExternalHook from "./useExternalHook";
 import { Link, useParams } from "react-router-dom";
 
 const ApiDataC = () => {
-  const apiUrl = "https://jsonplaceholder.typicode.com/posts";
-  const { data, loading } = useExternalHook(apiUrl);
+  //const apiUrl = "https://jsonplaceholder.typicode.com/posts";
+  const { data, loading } = useExternalHook();
 
   const { id } = useParams();
   //console.log(id);

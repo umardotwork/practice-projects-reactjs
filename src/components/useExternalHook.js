@@ -1,11 +1,13 @@
 import { useDebugValue, useEffect, useState } from "react";
 
-const useExternalHook = (url) => {
-  useDebugValue(url);
+const useExternalHook = () => {
   const [data, setData] = useState();
   const [error, setError] = useState();
   const [loading, setLoading] = useState(true);
   const [httpResponse, setHttpResponse] = useState();
+
+  const url = "https://jsonplaceholder.typicode.com/posts";
+  useDebugValue(url);
 
   const Developer = "Umar";
   useDebugValue(`Developer - ${Developer}`);

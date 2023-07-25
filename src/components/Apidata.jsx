@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 const Apidata = () => {
   //const [data, setData] = useState([]);
 
-  const apiUrl = "https://jsonplaceholder.typicode.com/posts";
-  const { data, loading } = useExternalHook(apiUrl);
+  //const apiUrl = "https://jsonplaceholder.typicode.com/posts";
+  const { data, loading } = useExternalHook();
 
   if (loading) {
     return (

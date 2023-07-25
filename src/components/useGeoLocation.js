@@ -21,7 +21,7 @@ const useGeoLocation = () => {
           });
         },
         (error) => {
-          console.error("Error getting location:", error);
+          console.error("Error getting location: ", error);
           alert("Error getting Location");
         }
       );
@@ -60,7 +60,7 @@ const useGeoLocation = () => {
             setIsLoading(false);
           },
           (error) => {
-            console.error("Error getting location:", error);
+            console.error("Error getting location: ", error);
             setIsLoading(false);
             setAccessDenied(true);
           }
